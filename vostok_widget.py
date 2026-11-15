@@ -2304,11 +2304,20 @@ class VostokWidget(QWidget):
     def closeEvent(self, event):
         if RICORDA_POSIZIONE:
             self._salva_stato()
+        if self._dlg_impostazioni is not None:
+            self._dlg_impostazioni.close()
         super().closeEvent(event)
+        # L'uscita e' esplicita: vedi setQuitOnLastWindowClosed(False) in fondo al file
+        QApplication.instance().quit()
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    # Il widget e' una finestra di tipo Tool, che Qt non conta tra le finestre "principali":
+    # senza questa riga, chiudendo la finestra delle impostazioni (l'unica finestra normale)
+    # Qt crederebbe chiusa l'ultima finestra e terminerebbe l'intera applicazione.
+    # Cosi' invece il programma esce solo dal click destro sull'orologio (closeEvent).
+    app.setQuitOnLastWindowClosed(False)
     widget = VostokWidget()
     widget.show()
     sys.exit(app.exec())
