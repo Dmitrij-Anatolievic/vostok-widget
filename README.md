@@ -35,6 +35,8 @@ Widget da scrivania (Python + PyQt6) che ricrea in digitale l'orologio **Vostok 
 
 C'è anche una sorpresa nascosta. 😉
 
+📖 Manuale completo: [docs/Vostok_Widget_Manuale_v4.pdf](docs/Vostok_Widget_Manuale_v4.pdf)
+
 ---
 
 ## English
