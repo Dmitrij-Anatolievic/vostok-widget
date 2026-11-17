@@ -63,3 +63,6 @@ Drag the bezel to rotate it, click the crown to pull it out (pos. 1: day/date, p
 Autore / Author: **Dmitrij Musella** · Licenza MIT.
 Font "Marck Script" © Denis Masharov & Marck Fogel, SIL Open Font License 1.1.
 Progetto amatoriale non affiliato a Vostok. / Fan project, not affiliated with Vostok.
+
+
+> Developed with AI-assisted coding tools (Claude/Anthropic)
